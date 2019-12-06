@@ -23,9 +23,38 @@
   (internal-identity-matrix 0 x)
   )
 
-;;;;;;;;;;;;;
-;;;;TESTS;;;;
-;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;
+;;;; DIMENSIONS ;;;;
+;;;;;;;;;;;;;;;;;;;;
+(define (get-rows x)
+  (if (null? x) 0
+      (+ 1 (get-rows (cdr x)))
+    )
+  )
+
+(define (internal-list-length l)
+  (if (null? l) 0
+      (+ 1 (internal-list-length (cdr l))))
+  )
+
+(define (get-cols x)
+  (internal-list-length (car x))
+  )
+
+
+;;;;;;;;;;;;;;;
+;;;; TESTS ;;;;
+;;;;;;;;;;;;;;;
 (define ident (identity-matrix 5))
 (display ident)
+(display "\n")
+
+(define test-list (list (list 1 2 3) (list 4 5 6)))
+(define output (get-rows test-list))
+(display output)
+(display "\n")
+
+(define output (get-cols test-list))
+(display output)
 (display "\n")
