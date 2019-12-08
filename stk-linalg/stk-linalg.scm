@@ -41,3 +41,27 @@
 (define (get-cols x)
   (internal-list-length (car x))
   )
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; SCALAR OPERATIONS ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;(define (mult-row-by-scalar s l)
+;    (if (null? l) '()
+;          (cons (* (car l) s) (mult-row-by-scalar s (cdr l)))
+;    )
+;  )
+
+(define (mult-row-by-scalar s r)
+    (map (lambda (x) (* s x)) r)
+  )
+
+;(define (mult-matrix-by-scalar s m)
+;    (if (null? m) '()
+;        (cons (mult-row-by-scalar s (car m)) (mult-matrix-by-scalar s (cdr m)))
+;    )
+;   )
+
+(define (mult-matrix-by-scalar s m)
+    (map (lambda (r) (mult-row-by-scalar s r)) m)
+  )
