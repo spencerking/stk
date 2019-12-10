@@ -1,3 +1,7 @@
 (load "stk-io.scm")
 (define f-input (read-file "test.txt"))
 (display f-input)
+(display "\n")
+(display (split-lines f-input))
+(display "\n")
+(display (car (split-lines f-input)))
