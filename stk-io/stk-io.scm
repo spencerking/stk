@@ -23,3 +23,20 @@
 (define (split-lines l)
   (if (null? l) '()
       (cons (internal-get-line l) (split-lines (internal-find-next-newline l)))))
+
+
+; TODO
+; Merge the following with the newline stuff above
+(define (internal-get-segment l s)
+  (if (or (null? l) (eqv? (car l) s)) '()
+    (cons (car l) (internal-get-segment (cdr l) s))))
+
+(define (internal-find-next-separator l s)
+  (cond
+    ((null? l) '())
+    ((eqv? (car l) s) (cdr l))
+    (#t (internal-find-next-separator (cdr l) s))))
+
+(define (split-on-separator l s)
+  (if (null? l) '()
+      (cons (internal-get-segment l s) (split-on-separator (internal-find-next-separator l s) s))))
