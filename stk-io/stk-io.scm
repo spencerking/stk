@@ -1,3 +1,5 @@
+; v12272019
+
 ; https://stackoverflow.com/questions/16335454/reading-from-file-using-scheme
 (define (read-file f)
   (call-with-input-file f

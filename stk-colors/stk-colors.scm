@@ -1,3 +1,5 @@
+; v12272019
+
 (define (display-black s)
   (display "\033[30m")
   (display s)

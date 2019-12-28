@@ -1,3 +1,5 @@
+; v12272019
+
 (define (internal-sum-list x)
   (if (null? x) 0
       (+ (car x) (internal-sum-list (cdr x)))))

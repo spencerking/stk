@@ -1,3 +1,5 @@
+; v12272019
+
 ; Basic list operations
 
 ; Sum  all elements in a list

@@ -1,3 +1,5 @@
+; v12272019
+
 ; A single list is a row vector
 ; In a list of lists, each list is a row
 ; Each element in a list is a column
