@@ -7,3 +7,7 @@
 
 (define range-list (list 12 23 3 4 5 -4 7))
 (display (range range-list))
+
+(display "\n")
+
+(display (harmonic-mean test-list))

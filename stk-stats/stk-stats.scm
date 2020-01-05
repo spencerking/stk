@@ -20,3 +20,11 @@
 
 (define (range l)
   (internal-range l (car l) (car l)))
+
+
+(define (internal-harmonic-mean-denom l)
+  (if (null? l) 0
+      (+ (/ 1 (car l)) (internal-harmonic-mean-denom (cdr l)))))
+
+(define (harmonic-mean l)
+  (/ (internal-count-list l) (internal-harmonic-mean-denom l)))
