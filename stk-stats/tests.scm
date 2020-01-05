@@ -11,3 +11,10 @@
 (display "\n")
 
 (display (harmonic-mean test-list))
+
+(display "\n")
+
+(define variance-list (list 1 2 3 2))
+(display (variance variance-list))
+
+(display "\n")

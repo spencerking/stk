@@ -1,4 +1,4 @@
-; v01042020
+; v01052020
 
 (define (internal-sum-list x)
   (if (null? x) 0
@@ -28,3 +28,10 @@
 
 (define (harmonic-mean l)
   (/ (internal-count-list l) (internal-harmonic-mean-denom l)))
+
+(define (internal-variance l m)
+  (if (null? l) 0
+      (+ (expt (- (car l) m) 2) (internal-variance (cdr l) m))))
+
+(define (variance l)
+  (* (/ 1 (internal-count-list l)) (internal-variance l (mean l))))
