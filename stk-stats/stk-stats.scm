@@ -35,3 +35,7 @@
 
 (define (variance l)
   (* (/ 1 (internal-count-list l)) (internal-variance l (mean l))))
+
+(define (std-dev l)
+  (sqrt (variance l))
+  )

@@ -18,3 +18,7 @@
 (display (variance variance-list))
 
 (display "\n")
+
+(display (std-dev variance-list))
+
+(display "\n")
