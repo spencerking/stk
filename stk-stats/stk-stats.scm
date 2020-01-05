@@ -1,4 +1,4 @@
-; v01032020
+; v01042020
 
 (define (internal-sum-list x)
   (if (null? x) 0
