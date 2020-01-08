@@ -5,3 +5,5 @@
 (display "\n")
 (display (count-list test-list))
 (display "\n")
+(display (substitute test-list 12 67))
+(display "\n")
