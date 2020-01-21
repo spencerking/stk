@@ -79,3 +79,6 @@
 	       (apply + (map * row col)))
 	     m2))
     m1))
+
+(define (transpose m)
+  (apply map list m))

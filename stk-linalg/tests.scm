@@ -28,3 +28,6 @@
 (define output (m* m1 m2))
 (display output)
 (display "\n")
+
+(define output (transpose m1))
+(display output)

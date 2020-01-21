@@ -41,3 +41,9 @@ m1: A matrix
 m2: A matrix
 
 Returns: The product of m1 and m2
+
+### (transpose m)
+
+m: A matrix
+
+Returns: The transpose of m
