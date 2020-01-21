@@ -21,3 +21,11 @@
 (define test-list (list (list 1 2 3) (list 4 5 6)))
 (define output (mult-matrix-by-scalar 3 test-list))
 (display output)
+(display "\n")
+
+;(define m1 (list (list 5 2 5) (list 7 9 0)))
+;(define m2 (list (list 4 8 3) (list 1 2 3) (list 4 5 6)))
+(define m1 (list (list 1 4) (list 1 9) (list 0 2 7)))
+(define m2 (list (list 6 3) (list 1 1)))
+(define output (m* m1 m1))
+(display output)

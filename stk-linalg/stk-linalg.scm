@@ -66,4 +66,16 @@
 
 (define (mult-matrix-by-scalar s m)
     (map (lambda (r) (mult-row-by-scalar s r)) m)
-  )
+    )
+
+
+
+; Other
+(define (m* m1 m2)
+  (map
+    (lambda (row)
+      (apply map
+	     (lambda col
+	       (apply + (map * row col)))
+	     m2))
+    m1))

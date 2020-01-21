@@ -33,3 +33,11 @@ s: A scalar value
 m: A list of lists representing a matrix
 
 Returns: A list of lists representing the matrix m multiplied by the scalar s
+
+### (m* m1 m2)
+
+m1: A matrix
+
+m2: A matrix
+
+Returns: The product of m1 and m2
