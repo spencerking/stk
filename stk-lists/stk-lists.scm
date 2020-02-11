@@ -1,4 +1,4 @@
-; v12272019
+; v02102020
 
 ; Basic list operations
 
@@ -21,3 +21,14 @@
      ((eq? (car l) old) (cons new (substitute (cdr l) old new)))
      (else (cons (car l) (substitute (cdr l) old new)))))
    (else (cons (substitute (car l) old new) (substitute (cdr l) old new)))))
+
+; Return the first n elements of a list
+(define (first-n l n)
+  (cond ((= 0 n) '())
+        (else (cons (car l) (first-n (cdr l) (- n 1))))))
+
+; Return the last element of a list
+(define (last-element l)
+    (if (null? l) '()
+        (cond ((null? (cdr l)) (car l))
+            (else (last-element (cdr l))))))

@@ -7,3 +7,7 @@
 (display "\n")
 (display (substitute test-list 12 67))
 (display "\n")
+(display (first-n test-list 5))
+(display "\n")
+(display (last-element test-list))
+(display "\n")
