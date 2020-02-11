@@ -47,3 +47,17 @@ Returns: The product of m1 and m2
 m: A matrix
 
 Returns: The transpose of m
+
+### (zero-row n)
+
+n: The number of elements in the row
+
+Returns: A list of n zeros
+
+### (dot* l1 l2)
+
+l1: A list of n elements
+
+l2: A list of n elements
+
+Returns: The dot product of l1 and l2

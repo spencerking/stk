@@ -31,3 +31,13 @@
 
 (define output (transpose m1))
 (display output)
+(display "\n")
+
+(display (zero-row 5))
+(display "\n")
+
+(define list1 (list 1 2 3))
+(define list2 (list 4 5 6))
+(define output (dot* list1 list2))
+(display output)
+(display "\n")

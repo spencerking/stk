@@ -82,3 +82,11 @@
 
 (define (transpose m)
   (apply map list m))
+
+(define (zero-row n)
+    (if (not (eqv? n 0)) (cons 0 (zero-row (- n 1)))
+        '(0)))
+
+; assumes two lists of equal length
+(define (dot* l1 l2)
+  (apply + (map * l1 l2)))
