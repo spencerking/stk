@@ -1,6 +1,9 @@
 (load "stk-number-theory.scm")
 
-(define primes (prime-factors 94))
+(define primes (prime-factors 12))
+(display primes)
+(display "\n")
+(define primes (prime-factors 225))
 (display primes)
 (display "\n")
 (define primes (prime-factors 30030))
